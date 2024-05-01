@@ -124,14 +124,24 @@ printTracks(); // Check the updated list of tracks
 
 // adds a playlist to the library
 const addPlaylist = function(name) {
-
+  const newPlaylistId = 'p' + generateUid(); // Generate a unique ID for the new playlist
+  const newPlaylist = { // Create a new playlist object
+    id: newPlaylistId,
+    name: name,
+    tracks: []
+  };
+  library.playlists[newPlaylistId] = newPlaylist; // Add the new playlist to the library
+  console.log(`Playlist added with ID: ${newPlaylistId}`);
 };
 
+// Test the function
+addPlaylist("New Playlist");
+printPlaylists(); // Check the updated list of playlists
 
 // STRETCH:
 // given a query string string, prints a list of tracks
 // where the name, artist or album contains the query string (case insensitive)
-// tip: use "string".search("tri") 
+// tip: use "string".search("tri")
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
 const printSearchResults = function(query) {
 
