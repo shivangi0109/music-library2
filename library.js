@@ -57,7 +57,7 @@ printPlaylists();
 // t03: Four Thirty-Three by John Cage (Woodstock 1952)
 const printTracks = function() {
 
-}
+};
 
 
 // prints a list of tracks for a given playlist, using the following format:
@@ -66,32 +66,32 @@ const printTracks = function() {
 // t02: Model View Controller by James Dempsey (WWDC 2003)
 const printPlaylist = function(playlistId) {
 
-}
+};
 
 
 // adds an existing track to an existing playlist
 const addTrackToPlaylist = function(trackId, playlistId) {
 
-}
+};
 
 
 // generates a unique id
 // (already implemented: use this for addTrack and addPlaylist)
 const generateUid = function() {
   return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-}
+};
 
 
 // adds a track to the library
 const addTrack = function(name, artist, album) {
 
-}
+};
 
 
 // adds a playlist to the library
 const addPlaylist = function(name) {
 
-}
+};
 
 
 // STRETCH:
@@ -101,4 +101,4 @@ const addPlaylist = function(name) {
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
 const printSearchResults = function(query) {
 
-}
+};
