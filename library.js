@@ -106,8 +106,20 @@ const generateUid = function() {
 
 // adds a track to the library
 const addTrack = function(name, artist, album) {
-
+  const newTrackId = 't' + generateUid(); // Generate a unique ID for the new track
+  const newTrack = { // Create a new track object
+    id: newTrackId,
+    name: name,
+    artist: artist,
+    album: album
+  };
+  library.tracks[newTrackId] = newTrack; // Add the new track to the library
+  console.log(`Track added with ID: ${newTrackId}`);
 };
+
+// Test the function
+addTrack("New Track", "New Artist", "New Album");
+printTracks(); // Check the updated list of tracks
 
 
 // adds a playlist to the library
