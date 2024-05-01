@@ -144,5 +144,18 @@ printPlaylists(); // Check the updated list of playlists
 // tip: use "string".search("tri")
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
 const printSearchResults = function(query) {
-
+  console.log(`Search results for "${query}":`);
+  for (const trackId in library.tracks) {
+    const track = library.tracks[trackId];
+    if (
+      track.name.toLowerCase().includes(query.toLowerCase()) ||
+      track.artist.toLowerCase().includes(query.toLowerCase()) ||
+      track.album.toLowerCase().includes(query.toLowerCase())
+    ) {
+      console.log(`${track.id}: ${track.name} by ${track.artist} (${track.album})`);
+    }
+  }
 };
+
+// Test the function
+printSearchResults('Code');
