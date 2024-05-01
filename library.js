@@ -159,3 +159,8 @@ const printSearchResults = function(query) {
 
 // Test the function
 printSearchResults('Code');
+
+// The reason we're not using the search method directly as suggested in the tip is that search returns the index of the first occurrence of a substring within a string, not a boolean indicating whether the substring exists within the string.
+// In the case of the printSearchResults function, we need to determine if the query string is present in the track name, artist, or album. We're interested in a boolean result indicating whether the substring is present, not its index.
+// For this purpose, using includes() method is more suitable. The includes() method returns true if the string contains the specified substring, and false otherwise, which aligns with our requirements.
+// Using includes() with toLowerCase() allows us to perform a case-insensitive search, which is also a requirement specified in the comments. Therefore, the approach taken in the function printSearchResults is more appropriate for this use case compared to using search.
